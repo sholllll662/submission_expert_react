@@ -9,7 +9,8 @@ import api from "../../api/dicodingForumAPI";
 jest.mock("../../api/dicodingForumAPI");
 
 describe("threads reducers and thunks", () => {
-  const makeStore = () => configureStore({ reducer: { threads: threadsReducer } });
+  const makeStore = () =>
+    configureStore({ reducer: { threads: threadsReducer } });
 
   beforeEach(() => jest.clearAllMocks());
 
