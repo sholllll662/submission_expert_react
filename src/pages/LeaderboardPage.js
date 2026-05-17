@@ -6,9 +6,11 @@ import "./LeaderboardPage.css";
 
 const LeaderboardPage = () => {
   const dispatch = useDispatch();
-  const { list = [], status, error } = useSelector(
-    (state) => state.leaderboard,
-  );
+  const {
+    list = [],
+    status,
+    error,
+  } = useSelector((state) => state.leaderboard);
 
   useEffect(() => {
     if (status === "idle") {
@@ -26,9 +28,7 @@ const LeaderboardPage = () => {
         <p>Pengguna dengan skor tertinggi berdasarkan kontribusi di forum.</p>
       </header>
       {isLoading && <Loading />}
-      {isError && (
-        <p className="error-message">{error || "Failed to load"}</p>
-      )}
+      {isError && <p className="error-message">{error || "Failed to load"}</p>}
       <section className="leaderboard-list">
         {list.map((item) => (
           <article key={item.user.id} className="leaderboard-card">
