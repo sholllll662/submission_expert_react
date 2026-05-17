@@ -1,0 +1,39 @@
+.threads-page {
+  max-width: 1120px;
+  margin: 0 auto;
+  padding: 24px;
+}
+
+.threads-header {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 18px;
+  align-items: flex-start;
+}
+
+.threads-header h1 {
+  margin: 0;
+  font-size: 2rem;
+}
+
+.thread-list {
+  margin-top: 24px;
+}
+
+.thread-form-area,
+.login-prompt {
+  margin-top: 32px;
+}
+
+.login-prompt {
+  background: #fff;
+  border: 1px solid #e2e8f0;
+  border-radius: 20px;
+  padding: 28px;
+}
+
+.error-message {
+  margin-top: 18px;
+  color: #dc2626;
+}

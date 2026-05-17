@@ -1,0 +1,83 @@
+.thread-detail-page {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 24px;
+}
+
+.thread-detail-card,
+.thread-comment-card,
+.comment-form-area,
+.login-prompt {
+  background: #fff;
+  border: 1px solid #e2e8f0;
+  border-radius: 20px;
+  padding: 24px;
+  margin-bottom: 24px;
+}
+
+.thread-detail-card header {
+  margin-bottom: 16px;
+}
+
+.thread-detail-meta {
+  color: #64748b;
+  margin-top: 8px;
+}
+
+.thread-detail-owner {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 22px;
+}
+
+.thread-detail-owner img {
+  width: 58px;
+  height: 58px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.thread-detail-body {
+  line-height: 1.8;
+  color: #334155;
+}
+
+.thread-detail-actions,
+.comment-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 18px;
+}
+
+.thread-detail-actions button,
+.comment-actions button {
+  padding: 10px 14px;
+  border: 1px solid #cbd5e1;
+  border-radius: 12px;
+  background: #f8fafc;
+  cursor: pointer;
+}
+
+.thread-detail-actions button.active,
+.comment-actions button.active {
+  background: #2563eb;
+  color: #fff;
+  border-color: #2563eb;
+}
+
+.thread-detail-actions button.negative,
+.comment-actions button.negative {
+  background: #ef4444;
+  color: #fff;
+  border-color: #ef4444;
+}
+
+.thread-comments-section h2 {
+  margin-top: 0;
+}
+
+.login-prompt h2 {
+  margin-top: 0;
+}

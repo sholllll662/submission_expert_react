@@ -1,0 +1,47 @@
+.leaderboard-page {
+  max-width: 980px;
+  margin: 0 auto;
+  padding: 24px;
+}
+
+.leaderboard-page header {
+  margin-bottom: 20px;
+}
+
+.leaderboard-list {
+  display: grid;
+  gap: 16px;
+}
+
+.leaderboard-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  padding: 22px;
+  border-radius: 20px;
+  border: 1px solid #e2e8f0;
+  background: #fff;
+}
+
+.leaderboard-user {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.leaderboard-user img {
+  width: 56px;
+  height: 56px;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.leaderboard-score {
+  font-weight: 700;
+  color: #2563eb;
+}
+
+.error-message {
+  color: #dc2626;
+}
