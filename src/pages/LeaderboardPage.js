@@ -1,21 +1,23 @@
-import React from "react";
-import { useQuery } from "@tanstack/react-query";
-import api from "../api/dicodingForumAPI";
+import React, { useEffect } from "react";
+import { useDispatch, useSelector } from "react-redux";
+import { fetchLeaderboard } from "../features/leaderboard/leaderboardSlice";
 import Loading from "../components/Loading";
 import "./LeaderboardPage.css";
 
-const fetchLeaderboardApi = async () => {
-  const res = await api.get("/leaderboards");
-  return res.data.data.leaderboards;
-};
-
 const LeaderboardPage = () => {
-  const {
-    data: list = [],
-    isLoading,
-    isError,
-    error,
-  } = useQuery(["leaderboard"], fetchLeaderboardApi);
+  const dispatch = useDispatch();
+  const { list = [], status, error } = useSelector(
+    (state) => state.leaderboard,
+  );
+
+  useEffect(() => {
+    if (status === "idle") {
+      dispatch(fetchLeaderboard());
+    }
+  }, [dispatch, status]);
+
+  const isLoading = status === "loading";
+  const isError = status === "failed";
 
   return (
     <main className="leaderboard-page">
@@ -25,7 +27,7 @@ const LeaderboardPage = () => {
       </header>
       {isLoading && <Loading />}
       {isError && (
-        <p className="error-message">{error?.message || "Failed to load"}</p>
+        <p className="error-message">{error || "Failed to load"}</p>
       )}
       <section className="leaderboard-list">
         {list.map((item) => (
