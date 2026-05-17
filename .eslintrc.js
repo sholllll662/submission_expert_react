@@ -6,6 +6,7 @@ module.exports = {
     jest: true,
   },
   extends: ["airbnb", "airbnb/hooks"],
+  plugins: ["react"],
   parserOptions: {
     ecmaVersion: "latest",
     sourceType: "module",

@@ -1,4 +1,5 @@
 import React, { useEffect } from "react";
+import { Helmet } from "react-helmet-async";
 import { useDispatch, useSelector } from "react-redux";
 import { fetchLeaderboard } from "../features/leaderboard/leaderboardSlice";
 import Loading from "../components/Loading";
@@ -23,6 +24,9 @@ const LeaderboardPage = () => {
 
   return (
     <main className="leaderboard-page">
+      <Helmet>
+        <title>Leaderboard - Yukdisk</title>
+      </Helmet>
       <header>
         <h1>Leaderboard</h1>
         <p>Pengguna dengan skor tertinggi berdasarkan kontribusi di forum.</p>
